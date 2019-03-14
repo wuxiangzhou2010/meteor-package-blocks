@@ -1,6 +1,6 @@
 /**
 
-@module Ethereum:blocks
+@module Mubiale:blocks
 */
 
 
@@ -123,7 +123,7 @@ Additionally cap the collection to 50 blocks
 function observeLatestBlocks(){
 
     // get the latest block immediately
-    web3.eth.getBlock('latest', function(e, block){
+    web3.eth.getBlock(0, 'latest', function(e, block){
         if(!e) {
             updateBlock(block);
         }
@@ -141,7 +141,7 @@ The observeLatestBlocks callback used in the block filter.
 */
 var checkLatestBlocks = function(e, hash){
     if(!e) {
-        web3.eth.getBlock(hash, function(e, block){
+        web3.eth.getBlock(0, hash, function(e, block){
             if(!e) {
                 var oldBlock = EthBlocks.latest;
 
