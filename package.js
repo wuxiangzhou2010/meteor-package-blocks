@@ -1,7 +1,7 @@
 Package.describe({
     name: 'mubiale:blocks',
     summary: 'Provides informations about the current and last 50 blocks',
-    version: '0.0.2',
+    version: '0.0.3',
     git: 'http://github.com/wuxiangzhou2010/meteor-package-blocks'
   });
   
@@ -11,7 +11,7 @@ Package.describe({
     api.use('mongo', ['client', 'server']);
   
     // api.use('frozeman:persistent-minimongo@0.1.3', 'client');
-    api.use('mubiale:web3@0.0.1', ['client', 'server']);
+    api.use('mubiale:web3@0.0.2', ['client', 'server']);
   
     api.export(['EthBlocks'], ['client', 'server']);
   
